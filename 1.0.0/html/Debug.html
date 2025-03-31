@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Posting Example</title>
+</head>
+<body>
+<input type="button" id="getInitialData" value="getInitialData" onclick="getInitialData()">
+<br/><br/>
+<input type="button" id="showErrorDialog" value="showErrorDialog" onclick="showErrorDialog()">
+<br/><br/>
+<input type="button" id="requestToken" value="requestToken" onclick="requestToken()">
+<br/><br/>
+<input type="button" id="showNoticeDetail" value="showNoticeDetail" onclick="showNoticeDetail()">
+
+<script type="text/javascript">
+    function getInitialData() {
+        aquavast.postMessage('{"method":"getInitialData","requestId":"1"}')
+    }
+
+    function showErrorDialog() {
+        aquavast.postMessage('{"method":"showErrorDialog","errorType":"error","errorDescription":"errorDescription"}')
+    }
+
+     function requestToken() {
+        aquavast.postMessage('{"method":"requestToken","requestId":"1"}')
+    }
+
+    function showNoticeDetail() {
+        aquavast.postMessage('{"method":"showNoticeDetail","noticeDetailUrl":"https://google.com","noticeDetailId":"5"}')
+    }
+
+    window.aquavast._private = {
+       postMessageCallback: (message) => {
+         console.log(message)
+       }
+    }
+</script>
+</body>
+</html>

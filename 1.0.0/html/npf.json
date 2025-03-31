@@ -1,0 +1,8 @@
+{
+  "baasHost":"55f574e737db5d869cac906761c0c37e.baas.nintendo.com",
+  "clientId":"9903b0a1055fec4a",
+  "printLog":false,
+  "debugLog":false,
+  "disableUsingGoogleAdvertisingId": false,
+  "disableUsingDeviceAnalyticsId": false
+}
